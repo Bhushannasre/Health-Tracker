@@ -1,0 +1,36 @@
+.chart-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.dropdown-container {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.dropdown-label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.dropdown {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.chart-wrapper {
+  position: relative;
+  height: 400px; /* Set a fixed height for the chart */
+}
+
+.no-data-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #999;
+}

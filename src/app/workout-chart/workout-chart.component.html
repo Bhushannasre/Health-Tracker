@@ -1,0 +1,29 @@
+<div class="chart-container">
+  <!-- Dropdown to Select User -->
+  <div class="dropdown-container">
+    <label for="userSelect" class="dropdown-label">Select User:</label>
+    <select id="userSelect" [(ngModel)]="selectedUser" (change)="updateChartData()" class="dropdown">
+      <option *ngFor="let user of users" [value]="user.name">{{ user.name }}</option>
+    </select>
+
+
+  </div>
+
+  <!-- Chart Display -->
+  <div *ngIf="chartData && chartData.labels && chartData.labels.length > 0">
+
+    <canvas baseChart
+  [datasets]="chartData.datasets"
+  [labels]="chartData.labels"
+  [options]="chartOptions"
+  [type]="chartType">
+</canvas>
+
+  </div>
+
+  <!-- Message if no chart data -->
+  <div *ngIf="chartData && chartData.labels && chartData.labels.length === 0" class="no-data-message">
+
+    No workout data available for the selected user.
+  </div>
+</div>

@@ -1,0 +1,48 @@
+<div class="p-4 border rounded-lg shadow-md bg-white">
+  <!-- Search by Name -->
+  <input type="text" placeholder="Search by Name" [(ngModel)]="searchQuery" (input)="filterUsers()" class="p-2 border rounded w-full mb-2" />
+
+  <!-- Filter by Workout Type -->
+  <input type="text" placeholder="Filter by Workout Type" [(ngModel)]="workoutFilter" (input)="filterUsers()" class="p-2 border rounded w-full mb-2" />
+
+  <!-- Table to display Users and Workouts -->
+  <table class="w-full border-collapse border border-gray-300">
+    <thead>
+      <tr class="bg-gray-200">
+        <th class="border p-2">User</th>
+        <th class="border p-2">Workouts</th>
+        <th class="border p-2">No of Workouts</th>
+        <th class="border p-2">Total Workout Minutes</th>
+        <th class="border p-2">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of displayedUsers">
+        <td class="border p-2">{{ user.name }}</td>
+        <td class="border p-2">
+          <span *ngFor="let workout of user.workouts">
+            {{ workout.type }}
+          </span>
+        </td>
+        <td class="border p-2">
+          {{ getWorkoutCount(user) }}
+        </td>
+        <td class="border p-2">
+          <span *ngFor="let workout of user.workouts">
+            {{ workout.minutes }} &nbsp;
+          </span>
+        </td>
+        <td class="border p-2">
+          <button class="Deletebtn" (click)="deleteWorkout(user.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Pagination Controls -->
+  <div class="flex justify-between mt-4">
+    <button (click)="prevPage()" [disabled]="currentPage === 1" class="Nextandprev">Previous</button>
+    <span class="p-2">Page {{ currentPage }} of {{ totalPages }}</span>
+    <button (click)="nextPage()" [disabled]="currentPage === totalPages" class="Nextandprev">Next</button>
+  </div>
+</div>

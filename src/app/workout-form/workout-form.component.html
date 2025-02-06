@@ -1,0 +1,26 @@
+<div class="p-4 border rounded-lg shadow-md bg-white">
+  <!-- User Name Input -->
+
+    <input  type="text" placeholder="User Name" [(ngModel)]="userName" class="p-2 border rounded w-full mb-2" />
+
+
+  <!-- Workout Type Input -->
+
+    <input  type="text" placeholder="Workout Type" [(ngModel)]="workoutType" class="p-2 border rounded w-full mb-2" />
+
+
+  <!-- Minutes Input -->
+
+    <input  type="number" placeholder="Minutes" [(ngModel)]="workoutMinutes" class="p-2 border rounded w-full mb-2" />
+
+
+  <!-- Add Workout Button  and Rest button-->
+<div class="button-container">
+  <button mat-raised-button color="primary" (click)="addWorkout()" class="addbutton">
+    Add Workout
+  </button>
+  <button mat-raised-button color="warning" (click)="reset()" class="resetbutton">
+    Reset
+  </button>
+</div>
+</div>

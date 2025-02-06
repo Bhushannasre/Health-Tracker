@@ -1,0 +1,53 @@
+
+<body class="bg-gray-100">
+  <div class="flex">
+      <!-- Sidebar -->
+      <div class="w-64 h-screen bg-gray-900 text-white p-4">
+          <!-- Logo -->
+          <div class="flex items-center justify-start mb-6">
+              <span class="text-2xl font-bold text-indigo-400">⌁ Health Tracker</span>
+          </div>
+
+          <!-- Navigation -->
+          <nav>
+              <ul>
+                  <li class="mb-2">
+                      <a href="/dashboard" class="flex items-center justify-between p-3 bg-gray-700 rounded-lg">
+                          <span class="flex items-center">
+                              <span class="mr-2">🏠</span>Dashboard
+                          </span>
+
+                      </a>
+                  </li>
+                  <li class="mb-2">
+                      <a href="/workout-form"   class="flex items-center p-3 hover:bg-gray-700 rounded-lg">
+                          <span class="mr-2">👥</span> Workout-form
+                      </a>
+                  </li>
+                  <li class="mb-2">
+                      <a href="/workout-list" class="flex items-center justify-between p-3 hover:bg-gray-700 rounded-lg">
+                          <span class="flex items-center">
+                              <span class="mr-2">📂</span>Workout-list
+                          </span>
+
+                      </a>
+                  </li>
+                  <li class="mb-2">
+                      <a href="/workout-chart" class="flex items-center justify-between p-3 hover:bg-gray-700 rounded-lg">
+                          <span class="flex items-center">
+                              <span class="mr-2">📊</span>workout-chart
+                          </span>
+
+                      </a>
+                  </li>
+              </ul>
+          </nav>
+      </div>
+      <div class="flex-1 p-8 overflow-y-auto">
+        <router-outlet></router-outlet>
+      </div>
+  </div>
+
+
+</body>
+
