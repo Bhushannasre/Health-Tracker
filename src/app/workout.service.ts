@@ -10,6 +10,12 @@ interface User {
   providedIn: 'root'
 })
 export class WorkoutService {
+  saveUsers(arg0: { id: number; name: string; workouts: { type: string; minutes: number; }[]; }[]) {
+    throw new Error('Method not implemented.');
+  }
+  deleteUser(arg0: number) {
+    throw new Error('Method not implemented.');
+  }
 
   setValue(arg0: {}) {
     throw new Error('Method not implemented.');
