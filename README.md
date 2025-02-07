@@ -27,4 +27,14 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
 
+## New Features Added
+- ✅ Dashboard Page  
+- ✅ Reset Button in Workout Form  
+- ✅ Delete Button in Workout List  
+- ✅ Unit & Coverage Testing (Karma)  
+- 🔧 **Work in Progress**: Fixing Workout Chart Dropdown Issue  
+## Live Demo
+🚀 [Click here to access the deployed app](your-live-app-link)
+
+
 # Health-Tracker b26bdcafcb0ec84cd618dfdd3afd666e91df762b
