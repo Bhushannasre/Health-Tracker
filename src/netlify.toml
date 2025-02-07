@@ -1,0 +1,9 @@
+[build]
+base= "health-challenge-tracker/"
+command = "npm run build:prod"
+publish = "dist/brower"
+
+[[redirects]]
+from ="/*"
+to = "/index.html"
+status = 200
