@@ -1,9 +1,8 @@
 [build]
-base= "health-challenge-tracker/"
-command = "npm run build:prod"
-publish = "dist/brower"
+command = "ng build --configuration=production"
+publish = "dist/health-challenge-tracker/browser"
 
 [[redirects]]
-from ="/*"
+from = "/*"
 to = "/index.html"
 status = 200
